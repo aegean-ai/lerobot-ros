@@ -16,7 +16,7 @@
 homepage = "https://github.com/ycheng517/lerobot-ros"
 
 [project]
-name = "lerobot-teleoperator-devices"
+name = "lerobot_teleoperator_devices"
 version = "0.1.0"
 description = "🤗 Teleoperators for lerobot"
 authors = [
@@ -24,7 +24,7 @@ authors = [
 ]
 readme = "README.md"
 license = { text = "Apache-2.0" }
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 keywords = ["robotics", "deep learning", "pytorch", "ros2"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -36,13 +36,13 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "lerobot>=0.4.0,<0.5.0",
+    "lerobot[gamepad,pynput-dep]>=0.6.1,<0.7.0",
     "pygame",
 ]
 
 [tool.ruff]
 line-length = 110
-target-version = "py310"
+target-version = "py312"
 exclude = ["*_pb2.py", "*_pb2_grpc.py"]
 
 [tool.ruff.lint]

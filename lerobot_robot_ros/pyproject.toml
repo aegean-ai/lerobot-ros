@@ -16,7 +16,7 @@
 homepage = "https://github.com/ycheng517/lerobot-ros"
 
 [project]
-name = "lerobot-robot-ros"
+name = "lerobot_robot_ros"
 version = "0.1.0"
 description = "🤗 A lightweight ROS 2 wrapper for lerobot"
 authors = [
@@ -24,7 +24,7 @@ authors = [
 ]
 readme = "README.md"
 license = { text = "Apache-2.0" }
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 keywords = ["robotics", "deep learning", "pytorch", "ros2"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -36,7 +36,7 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "lerobot>=0.4.0,<0.5.0",
+    "lerobot>=0.6.1,<0.7.0",
     "rclpy",
     "control_msgs",
     "sensor_msgs",
@@ -47,7 +47,7 @@ dependencies = [
 
 [tool.ruff]
 line-length = 110
-target-version = "py310"
+target-version = "py312"
 exclude = ["*_pb2.py", "*_pb2_grpc.py"]
 
 [tool.ruff.lint]
