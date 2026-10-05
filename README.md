@@ -1,5 +1,14 @@
 # LeRobot ROS
 
+> **aegean-ai fork.** This fork targets LeRobot 0.6.x (upstream pins `<0.5`). It differs from
+> [ycheng517/lerobot-ros](https://github.com/ycheng517/lerobot-ros) in three ways. Both packages
+> require `lerobot>=0.6.1,<0.7.0` and Python 3.12. The distribution names use underscores
+> (`lerobot_robot_ros`, `lerobot_teleoperator_devices`), because LeRobot's plugin discovery only
+> imports distributions whose name starts with `lerobot_robot_` or `lerobot_teleoperator_`; with
+> hyphens, `--robot.type=so101_ros` is never registered. The teleoperator package declares
+> `lerobot[gamepad,pynput-dep]`, because its package import needs `pygame` and `pynput`. The code
+> needed no changes: every LeRobot API it calls has the same signature in 0.6.1.
+
 This repository provides a generic ROS 2 interface for the [LeRobot](https://github.com/huggingface/lerobot) framework. It acts as a lightweight wrapper to connect any [ros2_control](https://control.ros.org/rolling/index.html) or [MoveIt](https://moveit.ai/) compatible robot arm with the LeRobot ecosystem.
 
 A gamepad teleoperator for 6-DoF end-effector control and a keyboard teleoperator for joint position control is also provided.
