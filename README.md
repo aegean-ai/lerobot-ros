@@ -56,7 +56,7 @@ conda install -c conda-forge libstdcxx-ng -y # needed as rclpy requires GLIBCXX_
 source /opt/ros/jazzy/setup.sh
 
 # Install lerobot-ros packages (this will install a compatible version of lerobot as well)
-git clone https://github.com/ycheng517/lerobot-ros
+git clone https://github.com/aegean-ai/lerobot-ros
 cd lerobot-ros
 pip install -e lerobot_robot_ros lerobot_teleoperator_devices
 ```
